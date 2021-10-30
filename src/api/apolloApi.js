@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, HttpLink, gql } from "@apollo/client";
 const httpLink = new HttpLink({
   uri: "https://api.github.com/graphql",
   headers: {
-    authorization: `Bearer `,
+    authorization: `Bearer`,
   },
 });
 
@@ -14,7 +14,7 @@ export const client = new ApolloClient({
 
 export const QUERY_REPO = gql`
   query getRepo {
-    user(login: "olinkaz93") {
+    user(login: "oziemins") {
       login
       repositories(last: 5) {
         nodes {

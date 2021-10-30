@@ -1,16 +1,25 @@
+
 import "./App.css";
-// ApolloClient - class of client
+
 // useQuery - grapQL hook importnat to make a queries through our APIs
-import { ApolloClient, InMemoryCache, gql, HttpLink, useQuery } from "@apollo/client";
+//import { ApolloClient, InMemoryCache, gql, HttpLink, useQuery } from "@apollo/client";
+import React from "react";
+import { useQuery } from "@apollo/client";
 //import DisplayData from "./DisplayData";
-import { setContext } from "@apollo/client/link/context";
+// import { setContext } from "@apollo/client/link/context";
 import { QUERY_REPO } from "./api/apolloApi";
 
 
 function App() {
-  //wrap components with ApolloProvider component - that will make the requests within GraphQL
   const { loading, error, data } = useQuery(QUERY_REPO);
-  console.log(error, data)
+  
+  if (loading) {
+    return <p> DATA IS LOADING...</p>
+  }
+  console.log(loading, error, data)
+  console.log(data.user)
+  console.log(data.user.login)
+   
 
   return (
       <div className="App">
@@ -20,16 +29,8 @@ function App() {
         
         <header className="App-header">
           <p>
-            GITHUB GRAPH QL API
+            REPOSITORIES
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
   );
