@@ -8,7 +8,7 @@ import { useQuery } from "@apollo/client";
 //import DisplayData from "./DisplayData";
 // import { setContext } from "@apollo/client/link/context";
 import { QUERY_REPO } from "./api/apolloApi";
-
+import Footer from "./Footer";
 
 function App() {
   const { loading, error, data } = useQuery(QUERY_REPO);
@@ -32,7 +32,9 @@ function App() {
             REPOSITORIES
           </p>
         </header>
+        <Footer />
       </div>
+      
   );
 }
 
