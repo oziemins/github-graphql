@@ -13,9 +13,8 @@ import Footer from "./Footer";
 function App() {
   const { loading, error, data } = useQuery(QUERY_REPO);
   
-  if (loading) {
-    return <p> DATA IS LOADING...</p>
-  }
+  if (error) return <h1>Something went wrong!</h1>;
+  if (loading) return <h1>Loading...</h1>;
   console.log(loading, error, data)
   console.log(data.user)
   console.log(data.user.login)
@@ -30,6 +29,8 @@ function App() {
         <header className="App-header">
           <p>
             REPOSITORIES
+            {console.log(data)}
+     
           </p>
         </header>
         <Footer />
