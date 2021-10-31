@@ -7,13 +7,13 @@ import { QUERY_REPO } from '../../api/apolloApi';
 const RepositoryList = () => {
 
   const { loading, error, data } = useQuery(QUERY_REPO);
-  console.log(error)
+  //console.log(error)
   if (error) return <h1>Something went wrong!</h1>;
   if (loading) return <h1>Loading...</h1>;
-  console.log(loading, error, data)
-  console.log("Repositories", data)
-  console.log("Repositories", data.user.login)
-  console.log("Repositories", data.user.url)
+  //console.log(loading, error, data)
+  //console.log("Repositories LIST", data)
+  //console.log("Repositories LIST", data.user.login)
+  //console.log("Repositories LIST", data.user.url)
   
   /* const repositoriesToRender = [
     {
