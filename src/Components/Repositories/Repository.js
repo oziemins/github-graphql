@@ -12,7 +12,13 @@ const Repository = (props) => {
         <p> RepositoryOwner ID: {repositoryOwner.id}  </p>
         <p> RepositoryOwner login: {repositoryOwner.login} </p>
         <p> RepositoryOwner url: {repositoryOwner.url} </p>
-        <p> Repository XXXX: {typeof(repositoryOwner.repositories.nodes.name)}</p>
+        <div> Repository:{(repositoryOwner.repositories.nodes).map(el=>
+            //console.log(
+            //"Repo name", el.name,
+            //"Description", el.description,
+            //"isFork", el.isFork),
+            (<p>Name: {el.name} Description: {el.description} pushedAt {el.pushedAt}</p>)
+            )}</div>
         
       </div>
     </div>
