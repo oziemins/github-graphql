@@ -7,7 +7,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 //import DisplayData from "./DisplayData";
 // import { setContext } from "@apollo/client/link/context";
-import { QUERY_REPO } from "./api/apolloApi";
+import { QUERY_REPO } from "../api/apolloApi";
 import Footer from "./Footer";
 
 function App() {
@@ -27,11 +27,12 @@ function App() {
         GITHUB GRAPHQL API Project</p>
         
         <header className="App-header">
-          <p>
+          <div>
             REPOSITORIES
+            
             {console.log(data)}
      
-          </p>
+          </div>
         </header>
         <Footer />
       </div>
