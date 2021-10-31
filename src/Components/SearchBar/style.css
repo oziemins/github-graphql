@@ -9,6 +9,11 @@ button {
     text-align: center;
     margin: 3px;
     padding: 2px 6px 3px;
+    border-color: #282c34;
     border-width: 2px;
     max-width: 80%;
+  }
+
+  button:hover {
+    color: white;
   }
