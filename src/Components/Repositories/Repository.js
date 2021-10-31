@@ -5,7 +5,11 @@ const Repository = (props) => {
   return (
     <div>
       <div>
-        {repositoryOwner.login} ({repositoryOwner.url})
+        {console.log("REPOSITORY CONSOLE", repositoryOwner)}
+        {console.log("REPOSITORY CONSOLE", repositoryOwner.login)}
+        <p> RepositoryOwner ID: {repositoryOwner.id}  </p>
+        <p> RepositoryOwner login: {repositoryOwner.login} </p>
+        <p> RepositoryOwner url: {repositoryOwner.url} </p>
       </div>
     </div>
   );
