@@ -8,6 +8,7 @@ import React from "react";
 // import { setContext } from "@apollo/client/link/context";
 import Footer from "./Footer";
 import RepositoryList from "./Repositories/RepositoryList";
+import SearchBar from "./SearchBar";
 
 function App() {
   
@@ -17,12 +18,13 @@ function App() {
       <div className="App">
       
         <p>
-        GITHUB GRAPHQL API Project</p>
+        GITHUB GRAPHQL API Project
+        </p>
         
         <header className="App-header">
           <div>
             <h1>GITHUB REPOSITORIES</h1>
-     
+            <SearchBar />
             <RepositoryList />
 
         
