@@ -12,9 +12,12 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+//Fetch the user Login from the Search bar 
+const userName = 'oziemins'
+
 export const QUERY_REPO = gql`
   query getRepo {
-    user(login: "oziemins") {
+    user(login: "${userName}") {
       id
       login
       url
