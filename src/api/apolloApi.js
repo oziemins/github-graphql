@@ -15,7 +15,9 @@ export const client = new ApolloClient({
 export const QUERY_REPO = gql`
   query getRepo {
     user(login: "oziemins") {
+      id
       login
+      url
       repositories(last: 5) {
         nodes {
           name
