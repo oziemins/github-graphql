@@ -7,7 +7,7 @@ import React from "react";
 //import DisplayData from "./DisplayData";
 // import { setContext } from "@apollo/client/link/context";
 import Footer from "./Footer";
-import RepositoryList from "./Repositories/RepositoryList";
+//import RepositoryList from "./Repositories/RepositoryList";
 import SearchBar from "./SearchBar";
 import Search from "./Search";
 
@@ -27,7 +27,7 @@ function App() {
             <h1>GITHUB REPOSITORIES</h1>
             <Search/>
             <SearchBar />
-            <RepositoryList />
+            
 
         
      
