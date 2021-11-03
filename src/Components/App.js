@@ -9,6 +9,7 @@ import React from "react";
 import Footer from "./Footer";
 import RepositoryList from "./Repositories/RepositoryList";
 import SearchBar from "./SearchBar";
+import Search from "./Search";
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
         <header className="App-header">
           <div>
             <h1>GITHUB REPOSITORIES</h1>
+            <Search/>
             <SearchBar />
             <RepositoryList />
 
