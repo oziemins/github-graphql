@@ -1,15 +1,18 @@
 import React from 'react';
 import Repository from './Repository';
-import { useQuery } from "@apollo/client";
-import { QUERY_REPO } from '../../api/apolloApi';
+//import { useQuery } from "@apollo/client";
+//import { QUERY_REPO } from '../../api/apolloApi';
 
 
-const RepositoryList = () => {
-
-  const { loading, error, data } = useQuery(QUERY_REPO);
+const RepositoryList = (props) => {
+  const { data } = props
+  console.log("repo data", data)
+  
+  //const { loading, error, data } = useQuery(QUERY_REPO);
+  //console.log(data)
   //console.log(error)
-  if (error) return <h1>Something went wrong!</h1>;
-  if (loading) return <h1>Loading...</h1>;
+  //if (error) return <h1>Something went wrong!</h1>;
+  //if (loading) return <h1>Loading...</h1>;
   //console.log(loading, error, data)
   //console.log("Repositories LIST", data)
   //console.log("Repositories LIST", data.user.login)
@@ -28,16 +31,19 @@ const RepositoryList = () => {
     }
   ]; */
 
+
+  //console.log("nodes", data.user.respositories.nodes)
   return (
     <div>
+      
       {/* 
       <h2> {data.user.login} </h2>
       <h2> {data.user.url} </h2>
       <h2> {data.user.id} </h2> */}
-      <Repository key={data.id} repositoryOwner={data.user}/>
-      {/*repositoriesToRender.map((data) => (
-        <Repository key={data.id} repositoryOwner={data} />
-      ))*/}
+      
+      {data.user.repositories.nodes.map((repository) => (
+        <Repository key={repository.id} repository={repository} />
+      ))}
     </div>
   );
 };
