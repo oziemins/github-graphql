@@ -1,5 +1,10 @@
 import { ApolloClient, InMemoryCache, HttpLink, gql } from "@apollo/client";
+import { AUTH_TOKEN } from "../constants";
 
+console.log(AUTH_TOKEN)
+const token = AUTH_TOKEN
+console.log(token)
+console.log(`Bearer ${token}`)
 const httpLink = new HttpLink({
   uri: "https://api.github.com/graphql",
   headers: {
