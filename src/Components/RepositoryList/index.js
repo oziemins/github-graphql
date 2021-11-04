@@ -9,28 +9,18 @@ const RepositoryList = (props) => {
   const { data } = props
   console.log("repodata", data)
   console.log("total count", data.user.repositories.totalCount)
-  //const { loading, error, data } = useQuery(QUERY_REPO);
-  //console.log(data)
-  //console.log(error)
+  console.log("edge node", data.user.repositories.edges)
   //if (error) return <h1>Something went wrong!</h1>;
   //if (loading) return <h1>Loading...</h1>;
-  //console.log(loading, error, data)
-  //console.log("Repositories LIST", data)
-  //console.log("Repositories LIST", data.user.login)
-  //console.log("Repositories LIST", data.user.url)
-  
-   //console.log("nodes", data.user.respositories.nodes)
+  if (data) console.log(data.user.repositories.pageInfo)
   return (
     <div className="repository-list">
-      
-      {/* 
-      <h2> {data.user.login} </h2>
-      <h2> {data.user.url} </h2>
-      <h2> {data.user.id} </h2> */}
       {data.user.repositories.totalCount === 0 ? <span>No repositories!</span> : 
-      data.user.repositories.nodes.map((repository) => (
-        <Repository key={repository.id} repository={repository}/>
+      data.user.repositories.edges.map((repository) => (
+        <Repository key={repository.node.id} repository={repository.node}/>
       ))} 
+      {console.log("REPO REPO", data)}
+      {data.user.repositories.pageInfo.hasNextPage ? <button>Load more...</button> : null }
     </div>
   );
 };

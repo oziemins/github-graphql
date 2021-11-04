@@ -8,8 +8,10 @@ import React from "react";
 import Footer from "./Footer";
 //import RepositoryList from "./Repositories/RepositoryList";
 import Search from "./Search";
+import Header from "./Header";
 
-function App() {
+const App = () => {
+
     return (
       <div className="app">
         <p>
