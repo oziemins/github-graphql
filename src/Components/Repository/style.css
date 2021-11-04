@@ -1,7 +1,11 @@
-.repo-link {
+.repository-link {
     color: #61dafb;
 }
 
-.repo-link:hover {
+.repository-link:hover {
     color: #ffff;
+}
+
+.repository-container {
+    border: 0.75em solid #ffff;
 }
