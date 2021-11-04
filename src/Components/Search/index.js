@@ -6,7 +6,7 @@ import "./style.css";
 
 const Search = () => {
     const [searchParameter, setSearchFilter] = useState('');
-    const [executeSearch, { data }] = useLazyQuery(QUERY_REPO);
+    const [executeSearch, { loading, error, data }] = useLazyQuery(QUERY_REPO);
     console.log("search data", data)
     return (
       <>
@@ -27,6 +27,8 @@ const Search = () => {
             OK
           </button>
         </div>
+        {loading ? <span>"Searching..."</span> : null}
+        {error ? <span>"No user found! Try again!" </span> : null }
         {data ? <RepositoryList data={data}/> : null}
       </>
     );

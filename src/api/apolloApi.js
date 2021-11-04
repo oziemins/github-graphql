@@ -27,6 +27,7 @@ export const QUERY_REPO = gql`
       login
       url
       repositories(last: 5) {
+        totalCount
         nodes {
           id
           name
