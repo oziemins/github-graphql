@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_REPO } from '../../api/apolloApi';
-import RepositoryList from '../Repositories/RepositoryList';
+import RepositoryList from '../RepositoryList/RepositoryList';
+import "./style.css";
 
 const Search = () => {
-    const [searchFilter, setSearchFilter] = useState('');
+    const [searchParameter, setSearchFilter] = useState('');
     const [executeSearch, { data }] = useLazyQuery(QUERY_REPO);
     console.log("search data", data)
     return (
       <>
         <div>
-          Search
           <input
             type="text"
+            placeholder="Search repositories from..."
             onChange={(e) => setSearchFilter(e.target.value)}
           />
           <button
             onClick={() =>
               {executeSearch({
-                variables: { userName: searchFilter }
+                variables: { userName: searchParameter }
               })
               console.log(data)}
             }
