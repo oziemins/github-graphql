@@ -1,4 +1,3 @@
-
 import "./app.css";
 
 // useQuery - grapQL hook importnat to make a queries through our APIs
@@ -12,23 +11,18 @@ import Search from "./Search";
 
 function App() {
     return (
-      <div className="App">
-      
+      <div className="app">
         <p>
         GITHUB GRAPHQL API Project
         </p>
-        
-        <header className="App-header">
+        <header className="app-header">
           <div>
             <h1>GITHUB REPOSITORIES</h1>
             <Search/>
-            
           </div>
-        </header>
-        
+        </header>        
         <Footer />
       </div>
-      
   );
 }
 

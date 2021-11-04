@@ -1,12 +1,11 @@
 import React from 'react';
-
 import './style.css';
 
 const Footer = () => (
-  <div className="Footer">
+  <div className="footer">
     <div>
       <small>
-        <span className="Footer-text">Developed by @oziemins</span>
+        <span className="footer-text">Developed by @oziemins</span>
       </small>
     </div>
   </div>
