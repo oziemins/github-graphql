@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import Search from "./Search";
 
 function App() {
+
     return (
       <div className="app">
         <p>
