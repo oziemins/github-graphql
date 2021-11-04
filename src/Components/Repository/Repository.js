@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Repository = (props) => {
+  console.log("props.repository", props.repository)
   const { name, description, isFork } = props.repository;
 
   return (

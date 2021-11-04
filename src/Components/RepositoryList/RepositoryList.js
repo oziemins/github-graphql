@@ -1,10 +1,10 @@
 import React from 'react';
-import Repository from './Repository';
+import Repository from '../Repository/Repository';
 //import { useQuery } from "@apollo/client";
 //import { QUERY_REPO } from '../../api/apolloApi';
 
-
 const RepositoryList = (props) => {
+  console.log("RepositoryList props", props)
   const { data } = props
   console.log("repo data", data)
   
@@ -18,21 +18,7 @@ const RepositoryList = (props) => {
   //console.log("Repositories LIST", data.user.login)
   //console.log("Repositories LIST", data.user.url)
   
-  /* const repositoriesToRender = [
-    {
-      id: '1',
-      login: 'oziemins',
-      url: 'https://github.com/oziemins'
-    },
-    {
-      id: '2',
-      login: 'cisco',
-      url: 'https://githhub.com/cisco'
-    }
-  ]; */
-
-
-  //console.log("nodes", data.user.respositories.nodes)
+   //console.log("nodes", data.user.respositories.nodes)
   return (
     <div>
       
