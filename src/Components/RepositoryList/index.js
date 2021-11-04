@@ -2,6 +2,7 @@ import React from 'react';
 import Repository from '../Repository';
 //import { useQuery } from "@apollo/client";
 //import { QUERY_REPO } from '../../api/apolloApi';
+import './style.css'
 
 const RepositoryList = (props) => {
   console.log("RepositoryList props", props)
@@ -20,7 +21,7 @@ const RepositoryList = (props) => {
   
    //console.log("nodes", data.user.respositories.nodes)
   return (
-    <div>
+    <div className="repository-list">
       
       {/* 
       <h2> {data.user.login} </h2>
@@ -28,7 +29,7 @@ const RepositoryList = (props) => {
       <h2> {data.user.id} </h2> */}
       {data.user.repositories.totalCount === 0 ? <span>No repositories!</span> : 
       data.user.repositories.nodes.map((repository) => (
-        <Repository key={repository.id} repository={repository} />
+        <Repository key={repository.id} repository={repository}/>
       ))} 
     </div>
   );
