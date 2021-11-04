@@ -26,7 +26,7 @@ const RepositoryList = (props) => {
       <h2> {data.user.login} </h2>
       <h2> {data.user.url} </h2>
       <h2> {data.user.id} </h2> */}
-      
+      {data.user.repositories.totalCount === 0 ? <span>No repositories!</span> : null}
       {data.user.repositories.nodes.map((repository) => (
         <Repository key={repository.id} repository={repository} />
       ))}
