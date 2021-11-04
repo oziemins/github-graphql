@@ -6,7 +6,7 @@ import Repository from '../Repository/Repository';
 const RepositoryList = (props) => {
   console.log("RepositoryList props", props)
   const { data } = props
-  console.log("repo data", data)
+  console.log("repodata", data)
   console.log("total count", data.user.repositories.totalCount)
   //const { loading, error, data } = useQuery(QUERY_REPO);
   //console.log(data)
