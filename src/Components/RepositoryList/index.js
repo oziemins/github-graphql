@@ -1,5 +1,5 @@
 import React from 'react';
-import Repository from '../Repository/Repository';
+import Repository from '../Repository';
 //import { useQuery } from "@apollo/client";
 //import { QUERY_REPO } from '../../api/apolloApi';
 

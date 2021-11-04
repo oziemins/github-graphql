@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_REPO } from '../../api/apolloApi';
-import RepositoryList from '../RepositoryList/RepositoryList';
+import RepositoryList from '../RepositoryList';
 import "./style.css";
 
 const Search = () => {

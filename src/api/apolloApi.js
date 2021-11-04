@@ -25,7 +25,6 @@ export const QUERY_REPO = gql`
     user(login: $userName) {
       id
       login
-      url
       repositories(last: 5) {
         totalCount
         nodes {
@@ -34,7 +33,6 @@ export const QUERY_REPO = gql`
           description
           isFork
           pushedAt
-          createdAt
           url
           issues {
             totalCount
