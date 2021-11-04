@@ -16,25 +16,32 @@ export const client = new ApolloClient({
 //const userName = 'oziemins'
 
 export const QUERY_REPO = gql`
-  query getRepo($userName: String!) {
+  query getRepo($userName: String!, $after: String) {
     user(login: $userName) {
       id
       login
-      repositories(last: 5) {
+      repositories(first: 2, after: $after) {
         totalCount
-        nodes {
-          id
-          name
-          description
-          isFork
-          pushedAt
-          url
-          issues {
-            totalCount
+        edges {
+          node {
+            id
+            name
+            description
+            isFork
+            pushedAt
+            url
+            issues {
+              totalCount
+            }
+            pullRequests {
+              totalCount
+            }
           }
-          pullRequests {
-            totalCount
-          }
+          cursor
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
         }
       }
     }

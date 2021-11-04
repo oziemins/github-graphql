@@ -6,8 +6,7 @@ import "./style.css";
 
 const Search = () => {
     const [searchParameter, setSearchFilter] = useState('');
-    const [executeSearch, { loading, error, data }] = useLazyQuery(QUERY_REPO);
-    console.log("search data", data)
+    const [executeSearch, { loading, error, data }] = useLazyQuery(QUERY_REPO, {variables: {after : null}});
     return (
       <>
         <div>
@@ -21,7 +20,7 @@ const Search = () => {
               {executeSearch({
                 variables: { userName: searchParameter }
               })
-              console.log(data)}
+              }
             }
           >
             OK
