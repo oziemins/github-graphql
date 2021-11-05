@@ -12,12 +12,12 @@ const Repository = (props) => {
 
   return (
     <div className="repository-container">
-      <div>Name: <a href={url} className="repository-link">{name}</a> </div>
-      <div>Description: {{description} === null ? {description} : "No description" } </div>
-      <div>Is it a fork? {isFork ? "Yes": "No"} </div> 
-      <div>Last commit date: {pushedAtDate} at {pushedAtHour} </div>
-      <div>Issue count: {issues.totalCount}</div>
-      <div>Pull requests count: {pullRequests.totalCount}</div>
+      <div className="repository-field">Name: <a href={url} className="repository-link">{name}</a> </div>
+      <div className="repository-field">Description: {{description} === null ? {description} : "No description" } </div>
+      <div className="repository-field">Is it a fork? {isFork ? "Yes": "No"} </div> 
+      <div className="repository-field">Last commit date: {pushedAtDate} at {pushedAtHour} </div>
+      <div className="repository-field">Issue count: {issues.totalCount}</div>
+      <div className="repository-field">Pull requests count: {pullRequests.totalCount}</div>
     </div>
   );
 };

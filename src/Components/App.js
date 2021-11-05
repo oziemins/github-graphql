@@ -13,16 +13,14 @@ import Header from "./Header";
 const App = () => {
 
     return (
+      
       <div className="app">
-        <p>
-        GITHUB GRAPHQL API Project
-        </p>
-        <header className="app-header">
-          <div>
-            <h1>GITHUB REPOSITORIES</h1>
+        <Header />
+          <div className="app-content">
+            <div className="app-title">GITHUB REPOSITORIES</div>
             <Search/>
           </div>
-        </header>        
+               
         <Footer />
       </div>
   );
