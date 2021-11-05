@@ -1,11 +1,18 @@
+
 .repository-link {
     color: #61dafb;
 }
 
 .repository-link:hover {
-    color: #ffff;
+    color: rosybrown;
 }
 
 .repository-container {
-    border: 0.75em solid #ffff;
+    background-color:white;
+    border: 0.2rem solid rosybrown;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    color: black;
+    font-size: 1rem;
 }
