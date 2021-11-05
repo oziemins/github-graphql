@@ -12,12 +12,12 @@ const Repository = (props) => {
 
   return (
     <div className="repository-container">
-      <div className="repository-field">Name: <a href={url} className="repository-link">{name}</a> </div>
-      <div className="repository-field">Description: {{description} === null ? {description} : "No description" } </div>
-      <div className="repository-field">Is it a fork? {isFork ? "Yes": "No"} </div> 
-      <div className="repository-field">Last commit date: {pushedAtDate} at {pushedAtHour} </div>
-      <div className="repository-field">Issue count: {issues.totalCount}</div>
-      <div className="repository-field">Pull requests count: {pullRequests.totalCount}</div>
+      <div className="repository-field"><span className="repository-label">Name:</span> <a href={url} className="repository-link">{name}</a> </div>
+      <div className="repository-field"><span className="repository-label">Description:</span> <span className="repository-text">{{description} === null ? {description} : "No description" }</span> </div>
+      <div className="repository-field"><span className="repository-label">Is it a fork?</span><span className="repository-text"> {isFork ? "Yes": "No"}</span> </div> 
+      <div className="repository-field"><span className="repository-label">Last commit date:</span> <span className="repository-text">{pushedAtDate} at {pushedAtHour}</span> </div>
+      <div className="repository-field"><span className="repository-label">Issue count:</span> <span className="repository-text">{issues.totalCount}</span></div>
+      <div className="repository-field"><span className="repository-label">Pull requests count:</span> <span className="repository-text">{pullRequests.totalCount}</span></div>
     </div>
   );
 };
