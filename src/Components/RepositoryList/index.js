@@ -6,7 +6,7 @@ import './style.css'
 
 const RepositoryList = (props) => {
   console.log("RepositoryList props", props)
-  const { data } = props
+  const { data, fetchMore } = props
   console.log("repodata", data)
   console.log("total count", data.user.repositories.totalCount)
   console.log("edge node", data.user.repositories.edges)
@@ -20,7 +20,22 @@ const RepositoryList = (props) => {
         <Repository key={repository.node.id} repository={repository.node}/>
       ))} 
       {console.log("REPO REPO", data)}
-      {data.user.repositories.pageInfo.hasNextPage ? <button>Load more...</button> : null }
+      {data.user.repositories.pageInfo.hasNextPage ? console.log("endCursor", data.user.repositories.pageInfo.endCursor): null}
+      {/*"fetch more", console.log(fetchMore)*/}
+      {data.user.repositories.pageInfo.hasNextPage ? 
+        <button onClick = {() => {
+          const { endCursor } =  data.user.repositories.pageInfo.endCursor;
+          
+          fetchMore({
+            variables: { after: endCursor },
+            updateQuery: (prevResult, {fetchMoreResult}) => {
+              console.log("prev result", prevResult)
+              console.log("more sult", fetchMoreResult)
+              
+            }
+          });
+        }}>Load more...</button> 
+        : null }
     </div>
   );
 };
