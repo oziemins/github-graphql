@@ -12,8 +12,13 @@ const Search = () => {
         <div>
           <input
             type="text"
-            placeholder="Search repositories from..."
+            placeholder="Type username..."
             onChange={(e) => setSearchFilter(e.target.value)}
+            onKeyPress={(e) => {if (e.key === "Enter")
+              {executeSearch({
+                variables: { userName: searchParameter }
+              })
+            }}}
           />
           <button
             onClick={() =>

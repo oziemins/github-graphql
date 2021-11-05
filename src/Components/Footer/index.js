@@ -3,11 +3,7 @@ import './style.css';
 
 const Footer = () => (
   <div className="footer">
-    <div>
-      <small>
-        <span className="footer-text">Developed by @oziemins</span>
-      </small>
-    </div>
+        <div className="footer-text">Developed by @oziemins</div>
   </div>
 );
 
