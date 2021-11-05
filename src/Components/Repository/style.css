@@ -1,6 +1,7 @@
 
 .repository-link {
     color: #61dafb;
+    font-weight: bolder;
 }
 
 .repository-link:hover {
@@ -15,4 +16,14 @@
     padding: 1em;
     color: black;
     font-size: 1rem;
+}
+/*
+.repository-label {
+    font-weight: bolder;
+    color: #282c34
+}*/
+
+.repository-text {
+    font-weight: bolder;
+    color: #282c34
 }
