@@ -19,25 +19,8 @@ const RepositoryList = (props) => {
       {data.user.repositories.totalCount === 0 ? <span>No repositories!</span> : 
       data.user.repositories.edges.map((repository) => (
         <Repository key={repository.node.id} repository={repository.node}/>
-      ))} 
-      {console.log("REPO REPO", data)}
-      {data.user.repositories.pageInfo.hasNextPage ? console.log("endCursor", data.user.repositories.pageInfo.endCursor): null}
-      {/*"fetch more", console.log(fetchMore)*/}
-      
-      {hasNextPage ? 
-        <button onClick = {() => {
-          const { endCursor } =  data.user.repositories.pageInfo.endCursor;
-          
-          fetchMore({
-            variables: { after: endCursor },
-            updateQuery: (prevResult, {fetchMoreResult}) => {
-              console.log("prev result", prevResult)
-              console.log("more sult", fetchMoreResult)
-              
-            }
-          });
-        }}>Load more...</button> 
-        : null }
+      ))}   
+
     </div>
   );
 };
