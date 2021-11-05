@@ -1,5 +1,5 @@
 import { ApolloClient, InMemoryCache, HttpLink, gql } from "@apollo/client";
-
+import { relayStylePagination } from "@apollo/client/utilities";
 const httpLink = new HttpLink({
   uri: "https://api.github.com/graphql",
   headers: {
@@ -9,7 +9,15 @@ const httpLink = new HttpLink({
 
 export const client = new ApolloClient({
   link: httpLink,
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Query: {
+        fields: {
+          repositories: relayStylePagination(),
+        },
+      },
+    },
+  }),
 });
 
 //Fetch the user Login from the Search bar 
@@ -20,7 +28,7 @@ export const QUERY_REPO = gql`
     user(login: $userName) {
       id
       login
-      repositories(first: 3, after: $after) {
+      repositories(first: 2, after: $after) {
         totalCount
         edges {
           node {

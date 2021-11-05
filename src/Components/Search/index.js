@@ -33,9 +33,29 @@ const Search = () => {
         </div>
         {loading ? <span>"Searching..."</span> : null}
         {error ? <span>"No user found! Try again!" </span> : null }
+        {data? console.log("Is there more pagges?", data.user.repositories.pageInfo.hasNextPage) : null}
         {data ? <RepositoryList data={data} fetchMore={fetchMore}/> : null}
         {console.log("FETCH MORE", fetchMore)}
-        
+        {(data && data.user.repositories.pageInfo.hasNextPage) && (
+          <div className="more-button">
+            <button
+              onClick={() =>
+                fetchMore({
+                  variables: {after: data.user.repositories.pageInfo.endCursor},
+                  updateQuery: (prevResult, {fetchMoreResult}) => {
+                    fetchMoreResult.user.repositories.edges = [
+                      ...prevResult.user.repositories.edges,
+                      ...fetchMoreResult.user.repositories.edges
+                    ];
+                    return fetchMoreResult;
+                  }
+                })
+              }
+            >
+            Load more...
+            </button>
+          </div>
+          )}
       </>
     );
   };

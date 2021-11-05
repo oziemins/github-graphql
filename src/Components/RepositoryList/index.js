@@ -13,6 +13,7 @@ const RepositoryList = (props) => {
   //if (error) return <h1>Something went wrong!</h1>;
   //if (loading) return <h1>Loading...</h1>;
   if (data) console.log(data.user.repositories.pageInfo)
+  const hasNextPage = data.user.repositories.pageInfo.hasNextPage;
   return (
     <div className="repository-list">
       {data.user.repositories.totalCount === 0 ? <span>No repositories!</span> : 
@@ -22,7 +23,8 @@ const RepositoryList = (props) => {
       {console.log("REPO REPO", data)}
       {data.user.repositories.pageInfo.hasNextPage ? console.log("endCursor", data.user.repositories.pageInfo.endCursor): null}
       {/*"fetch more", console.log(fetchMore)*/}
-      {data.user.repositories.pageInfo.hasNextPage ? 
+      
+      {hasNextPage ? 
         <button onClick = {() => {
           const { endCursor } =  data.user.repositories.pageInfo.endCursor;
           
