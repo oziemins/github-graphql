@@ -37,8 +37,8 @@ const Search = () => {
         {data ? <RepositoryList data={data} fetchMore={fetchMore}/> : null}
         {console.log("FETCH MORE", fetchMore)}
         {(data && data.user.repositories.pageInfo.hasNextPage) && (
-          <div className="more-button">
-            <button
+
+            <button className="more-button"
               onClick={() =>
                 fetchMore({
                   variables: {after: data.user.repositories.pageInfo.endCursor},
@@ -54,7 +54,6 @@ const Search = () => {
             >
             Load more...
             </button>
-          </div>
           )}
       </>
     );
