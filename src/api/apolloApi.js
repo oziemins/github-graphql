@@ -28,7 +28,7 @@ export const QUERY_REPO = gql`
     user(login: $userName) {
       id
       login
-      repositories(first: 2, after: $after) {
+      repositories(first: 1, after: $after) {
         totalCount
         edges {
           node {

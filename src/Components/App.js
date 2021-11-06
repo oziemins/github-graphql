@@ -7,23 +7,25 @@ import React from "react";
 // import { setContext } from "@apollo/client/link/context";
 import Footer from "./Footer";
 //import RepositoryList from "./Repositories/RepositoryList";
-import Search from "./Search";
+
 import Header from "./Header";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import NotFound from "./NotFound";
 const App = () => {
-
-    return (
-      
+  return (
+    <Router>
       <div className="app">
         <Header />
-          <div className="app-content">
-            <div className="app-title">GITHUB REPOSITORIES</div>
-            <Search/>
-          </div>
-               
+        <Routes>
+          
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
         <Footer />
       </div>
+    </Router>
   );
-}
+};
 
 export default App;
