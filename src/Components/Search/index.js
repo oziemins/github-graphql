@@ -12,6 +12,7 @@ const Search = () => {
         <div>
           <input
             type="text"
+            required
             placeholder="Type username..."
             onChange={(e) => setSearchFilter(e.target.value)}
             onKeyPress={(e) => {if (e.key === "Enter")
@@ -30,6 +31,7 @@ const Search = () => {
           >
             Search!
           </button>
+          
         </div>
         {loading ? <span>"Searching..."</span> : null}
         {error ? <span>"No user found! Try again!" </span> : null }
