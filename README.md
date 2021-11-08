@@ -53,5 +53,3 @@ Go to your browser (if not redirected directly) http://localhost:3000
  - Apollo https://www.apollographql.com/
  - Apollo Client https://www.apollographql.com/apollo-client
  - React Render v6 https://remix.run/blog/react-router-v6
-
-
