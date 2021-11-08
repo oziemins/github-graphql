@@ -8,7 +8,6 @@ const Repository = (props) => {
   //console.log("pushed at type", pushedAt.split("T"))
   const pushedAtDate = pushedAt.split("T")[0]
   const pushedAtHour = (pushedAt.split("T")[1].split("Z"))[0]
-  //console.log(pushedAtHour)
 
   return (
     <div className="repository-container">
