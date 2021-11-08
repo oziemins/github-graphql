@@ -7,12 +7,9 @@ import React from "react";
 //import RepositoryList from "./Repositories/RepositoryList";
 import Search from "../Search"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
 const Home = () => {
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    const { location } = new useNavigate();
-    console.log("test location!", search, params)
+       
   return (
     <div className="app-content">
       <div className="app-title">GITHUB REPOSITORIES</div>

@@ -10,6 +10,7 @@ import Footer from "./Footer";
 
 import Header from "./Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Home from "./Home";
 import NotFound from "./NotFound";
 const App = () => {
@@ -20,8 +21,9 @@ const App = () => {
         <Header />
         
         <Routes>
-          
+        
           <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/user/:userName" element={<Home />}></Route>
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
