@@ -9,6 +9,7 @@ import Search from "../Search"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Home = () => {
+       
   return (
     <div className="app-content">
       <div className="app-title">GITHUB REPOSITORIES</div>
