@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
     background-color: #50a8ff;
-    padding: 20px;
     color: #ffffff;
+    height: 80px;
+    justify-content: center;
   }
    
   .footer-text {
