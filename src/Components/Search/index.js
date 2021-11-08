@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_REPO } from "../../api/apolloApi";
 import RepositoryList from "../RepositoryList";
 import "./style.css";
 import { useNavigate } from "react-router";
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from "react-router-dom";
 
 const Search = () => {
   const [searchParameter, setSearchFilter] = useState("");
@@ -13,11 +13,21 @@ const Search = () => {
     { variables: { after: null } }
   );
   let navigate = useNavigate();
-  let search = window.location.search;
-  let params = new URLSearchParams(search);
-  console.log("keys!", params.keys())
   const { userName } = useParams();
-  console.log("Test username!", userName)
+  console.log("Test username!", userName);
+  const location = useLocation();
+  console.log("Test location", location);
+
+  useEffect(() => {
+    if (userName) {
+      setSearchFilter(userName);
+      executeSearch({
+        variables: { userName: userName },
+      });
+    }
+    console.log("effect user", userName);
+    console.log("effect error", error);
+  }, [userName]);
 
   return (
     <>
@@ -26,6 +36,7 @@ const Search = () => {
           type="text"
           required
           placeholder="Type username..."
+          value={searchParameter}
           onChange={(e) => setSearchFilter(e.target.value)}
           onKeyPress={(e) => {
             if (e.key === "Enter") {
@@ -42,7 +53,6 @@ const Search = () => {
               variables: { userName: searchParameter },
             });
             navigate(`/user/${searchParameter}`);
-            
           }}
         >
           Search!
