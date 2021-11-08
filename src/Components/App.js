@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 
 // useQuery - grapQL hook importnat to make a queries through our APIs
 //import { ApolloClient, InMemoryCache, gql, HttpLink, useQuery } from "@apollo/client";
