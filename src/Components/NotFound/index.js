@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 
 const NotFound= () => {
   return (
-    <div className="app-content">
-      <div className="app-title">
+    <div className="notfound-content">
+      <div className="notfound-title">
       <p>Sorry! PAGE DOES NOT EXIST!</p>
-      <Link className="app-link" to="/">GO BACK TO THE HOME PAGE</Link>
+      <Link className="notfound-link" to="/">GO BACK TO THE HOME PAGE</Link>
       </div>
     </div>
   );

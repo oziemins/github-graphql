@@ -20,9 +20,6 @@ export const client = new ApolloClient({
   }),
 });
 
-//Fetch the user Login from the Search bar 
-//const userName = 'oziemins'
-
 export const QUERY_REPO = gql`
   query getRepo($userName: String!, $after: String) {
     user(login: $userName) {
