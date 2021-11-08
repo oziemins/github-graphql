@@ -1,12 +1,12 @@
 input {
-    font-family: verdana;
-    width: 80%;
-    background-color:white;
-    border: 0.2rem solid black;
-    border-radius: 1em;
-    margin: 1em;
-    padding: 1em;
-    color: black;
+  font-family: verdana;
+  width: 80%;
+  background-color: white;
+  border: 0.2rem solid black;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+  color: black;
 }
 
 .more-button {
@@ -22,21 +22,16 @@ input {
 }
 
 button {
-    font-family: verdana;
-    background-color: rosybrown;
-    text-align: center;
-    border-width: 2px;
-    max-width: 80%;
-    border: 0.2rem solid rosybrown;
-    border-radius: 1em;
-    padding: 1em;
-  }
+  padding: 1em;
+  font-family: verdana;
+  background-color: rosybrown;
+  text-align: center;
+  border-width: 2px;
+  max-width: 80%;
+  border: 0.2rem solid rosybrown;
+  border-radius: 1em;
+}
 
-
-
-  button:hover {
-    color: white;
-  }
-
-
-  
+button:hover {
+  color: white;
+}
