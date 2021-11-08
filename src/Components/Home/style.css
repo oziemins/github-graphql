@@ -2,11 +2,11 @@
     text-align: center;
   }
   
-  .app-title {
+  .home-title {
     font-size: 100%;
   }
   
-  .app-content {
+  .home-content {
     background-color: #282c34;
     flex: 1;
     display: flex;
@@ -16,9 +16,5 @@
     font-size: calc(10px + 2vmin);
     color: white;
     min-height: calc(100vh - 160px);
-  }
-  
-  .app-link {
-    color: #50a8ff;
   }
   
