@@ -1,10 +1,10 @@
+import "./style.css";
 import React, { useState, useEffect } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_REPO } from "../../api/apolloApi";
 import RepositoryList from "../RepositoryList";
-import "./style.css";
 import { useNavigate } from "react-router";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Search = () => {
   const [searchParameter, setSearchFilter] = useState("");
@@ -14,9 +14,6 @@ const Search = () => {
   );
   let navigate = useNavigate();
   const { userName } = useParams();
-  console.log("Test username!", userName);
-  const location = useLocation();
-  console.log("Test location", location);
 
   useEffect(() => {
     if (userName) {
@@ -67,7 +64,6 @@ const Search = () => {
           )
         : null}
       {data ? <RepositoryList data={data} fetchMore={fetchMore} /> : null}
-      {console.log("FETCH MORE", fetchMore)}
       {data && data.user.repositories.pageInfo.hasNextPage && (
         <button
           className="more-button"
