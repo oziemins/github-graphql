@@ -27,7 +27,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 - scopes/permissions you need to check: admin: repo, user
 
 ```sh
-REACT_APP_GITHUB_ACCESS_TOKEN=xxxXXX
+REACT_APP_GITHUB_ACCESS_TOKEN = xxxXXX
 ```
 
 ### 5. Install dependencies
