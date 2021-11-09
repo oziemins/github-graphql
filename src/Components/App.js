@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -10,6 +9,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import "./App.css";
 
 const App = () => {
   return (

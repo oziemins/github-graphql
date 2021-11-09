@@ -1,25 +1,23 @@
+.repository-container {
+  background-color: white;
+  border: 0.2rem solid rosybrown;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em;
+  color: black;
+  font-size: 1rem;
+}
+
+.repository-text {
+  font-weight: bolder;
+  color: #282c34;
+}
 
 .repository-link {
-    color: #61dafb;
-    font-weight: bolder;
+  color: #61dafb;
+  font-weight: bolder;
 }
 
 .repository-link:hover {
-    color: rosybrown;
-}
-
-.repository-container {
-    background-color:white;
-    border: 0.2rem solid rosybrown;
-    border-radius: 1em;
-    margin: 1em;
-    padding: 1em;
-    color: black;
-    font-size: 1rem;
-}
-
-
-.repository-text {
-    font-weight: bolder;
-    color: #282c34
+  color: rosybrown;
 }
