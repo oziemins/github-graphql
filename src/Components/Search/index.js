@@ -1,10 +1,10 @@
-import "./style.css";
 import React, { useState, useEffect } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { QUERY_REPO } from "../../api/apolloApi";
 import RepositoryList from "../RepositoryList";
 import { useNavigate } from "react-router";
 import { useParams } from "react-router-dom";
+import "./style.css";
 
 const Search = () => {
   const [searchParameter, setSearchFilter] = useState("");

@@ -1,8 +1,6 @@
-import "./style.css";
-// useQuery - grapQL hook importnat to make a queries through our APIs
-//import { ApolloClient, InMemoryCache, gql, HttpLink, useQuery } from "@apollo/client";
 import React from "react";
 import Search from "../Search";
+import "./style.css";
 
 const Home = () => {
   return (

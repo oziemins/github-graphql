@@ -1,20 +1,15 @@
-.app {
-    text-align: center;
-  }
-  
-  .home-title {
-    font-size: 100%;
-  }
-  
-  .home-content {
-    background-color: #282c34;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    min-height: calc(100vh - 160px);
-  }
-  
+.home-title {
+  font-size: 100%;
+}
+
+.home-content {
+  background-color: #282c34;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: calc(100vh - 160px);
+}
