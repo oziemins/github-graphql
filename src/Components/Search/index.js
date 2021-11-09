@@ -22,8 +22,8 @@ const Search = () => {
         variables: { userName: userName },
       });
     }
-    console.log("effect user", userName);
-    console.log("effect error", error);
+    //console.log("effect user", userName);
+    //console.log("effect error", error);
   }, [userName]);
 
   return (
@@ -57,13 +57,13 @@ const Search = () => {
       </div>
       {loading ? <span>"Searching..."</span> : null}
       {error ? <span>"No user found! Try again!" </span> : null}
-      {data
+      {/*data
         ? console.log(
-            "Is there more pagges?",
+            "Is there more pages?",
             data.user.repositories.pageInfo.hasNextPage
           )
-        : null}
-      {data ? <RepositoryList data={data} fetchMore={fetchMore} /> : null}
+        : null*/}
+      {data ? <RepositoryList data={data} /> : null}
       {data && data.user.repositories.pageInfo.hasNextPage && (
         <button
           className="more-button"

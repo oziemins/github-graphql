@@ -4,7 +4,7 @@ import './style.css'
 
 const RepositoryList = (props) => {
   const { data } = props
-  if (data) console.log(data.user.repositories.pageInfo)
+  //if (data) console.log(data.user.repositories.pageInfo)
 
   return (
     <div className="repository-list">
